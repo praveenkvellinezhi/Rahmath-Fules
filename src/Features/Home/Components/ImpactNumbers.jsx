@@ -25,7 +25,7 @@ export default function ImpactNumbers() {
   ];
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 bg-white">
+    <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 py-12 sm:py-16 bg-white">
       
       {/* ✅ Responsive Heading */}
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10 sm:mb-16">

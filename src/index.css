@@ -6,3 +6,21 @@
 @theme {
   --font-sans: "Montserrat", sans-serif;
 }
+
+
+  .container-global {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5rem;  /* px-10 = 40px */
+  padding-right: 2.5rem;
+}
+
+@media (max-width: 640px) {
+  .container-global {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+

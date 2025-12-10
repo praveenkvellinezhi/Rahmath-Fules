@@ -35,10 +35,10 @@ export default function Hero() {
   };
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden  ">
       {/* Blue Section */}
-      <div className="px-4 sm:px-6 bg-[#f3f8fd] h-[75vh] relative">
-        <div className="mx-auto max-w-7xl py-12 sm:py-16">
+      <div className="  sm:px-6 bg-[#f3f8fd] h-[75vh] relative">
+        <div className=" max-w-7xl py-12 sm:py-16 px-10">
           <h1
             style={{
               fontWeight: 600,
@@ -49,6 +49,9 @@ export default function Hero() {
           >
             Fueling The Future With Trusted <br /> Energy Solutions
           </h1>
+             <p className="max-w-xl text-[16px] sm:text-[18px] md:text-[20px] leading-[1.6] text-gray-700 mt-3">
+              A Trusted name in Fuel Trading And Transportation with Decades of Expertise.
+            </p>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mt-8 sm:mt-10">
             <div className="flex gap-4 flex-wrap">
@@ -60,15 +63,13 @@ export default function Hero() {
               </button>
             </div>
 
-            <p className="max-w-xl text-[16px] sm:text-[18px] md:text-[20px] leading-[1.6] text-gray-700">
-              A Trusted name in Fuel Trading And Transportation with Decades of Expertise.
-            </p>
+         
           </div>
         </div>
       </div>
 
       {/* Sliding Carousel */}
-      <div className="relative z-10 -mt-[120px] sm:-mt-[150px] md:-mt-[180px] flex justify-center px-4">
+      <div className="relative z-10 -mt-[120px] sm:-mt-[150px] md:-mt-[180px] flex justify-end px-4">
         <div className="relative w-full max-w-5xl h-[200px] sm:h-[260px] md:h-[320px]">
           
           {slides.map((slide, index) => {

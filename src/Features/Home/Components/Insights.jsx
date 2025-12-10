@@ -29,7 +29,7 @@ export default function InsightsSection() {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-16 bg-white">
+    <div className="w-full lg:px-10 mx-auto px-4 py-16 bg-white">
       <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
         Insights & Industry Updates
       </h2>

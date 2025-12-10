@@ -54,17 +54,20 @@ export default function StatsAndOffer() {
   return (
     <>
       {/* ===================== ✅ OFFER SECTION ===================== */}
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-white  py-12 sm:py-16 ">
         <h1 className="text-center text-[26px] sm:text-[30px] lg:text-[34px] font-semibold mb-4 sm:mb-5">
           What We Offer
         </h1>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
+        <div className="px-4 sm:px-6 lg:px-10  ">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4  sm:gap-6 lg:gap-8">
             {services.map((item, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center ">
                 {/* ✅ IMAGE WITH TAPERED BOTTOM + BORDER */}
-                <div className="relative mx-auto w-full max-w-[220px] sm:max-w-[240px] lg:max-w-[260px] shadow-black">
+                <div
+                  className="relative mx-auto w-full lg:px-10     sm:max-w-[280px] mt-6 lg:max-w-[364px] xl:max-w-[320px]
+                  shadow-black"
+                >
                   <div
                     className="
                       border border-black
@@ -102,13 +105,14 @@ export default function StatsAndOffer() {
       </section>
 
       {/* ===================== ✅ STATS SECTION ===================== */}
-      <section className="bg-white py-12 sm:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div className=" mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {stats.map((item, index) => (
               <div
                 key={index}
                 className="
+                
                   bg-white
                   rounded-xl
                   border
@@ -122,7 +126,7 @@ export default function StatsAndOffer() {
                   duration-300
                 "
               >
-                <div className="flex justify-center mb-3 sm:mb-4">
+                <div className="flex justify-center  mb-3 sm:mb-4">
                   <img
                     src={item.icon}
                     alt={item.title}

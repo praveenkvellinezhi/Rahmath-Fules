@@ -47,8 +47,8 @@ export default function VideoCarousel() {
   }, [index, baseLength]);
 
   return (
-    <div className="w-full bg-white py-10 sm:py-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4">
+    <div className="w-full bg-white  py-10 sm:py-16 overflow-hidden">
+      <div className=" lg:px-10 sm:px-4">
 
         {/* ✅ VIEWPORT (Perfect Centering + Fixed Height) */}
         <div className="relative overflow-hidden h-[300px] sm:h-[420px] md:h-[480px] flex items-center justify-center">

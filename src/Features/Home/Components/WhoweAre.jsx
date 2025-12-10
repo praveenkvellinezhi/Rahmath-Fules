@@ -5,7 +5,7 @@ import HandShake from "../../../assets/Images/Hanshake.png";
 export default function WhoWeAre() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className=" mx-auto px-10">
         
         {/* Section Title */}
         <div className="text-center mb-12">
@@ -16,7 +16,7 @@ export default function WhoWeAre() {
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2  items-center ">
           
           {/* ✅ Left Side - SAME IMAGE STRUCTURE (Only Responsive Sizes Added) */}
           <div className="relative flex items-start justify-start min-h-[260px] sm:min-h-[320px] lg:min-h-[350px]">
@@ -46,8 +46,8 @@ export default function WhoWeAre() {
             </div>
 
             {/* ✅ SAME Handshake Image */}
-            <div className="relative z-20 rounded-lg overflow-hidden shadow-xl 
-              w-[120px] sm:w-[160px] 
+            <div className="relative z-20 rounded-lg overflow-hidden shadow-xl  
+             lg:w-[200px] sm:w-[160px] 
               h-[160px] sm:h-[200px] 
               ml-3 sm:ml-5">
               <img
@@ -60,8 +60,8 @@ export default function WhoWeAre() {
           </div>
 
           {/* ✅ Right Side - Responsive Only */}
-          <div className="space-y-6 text-center lg:text-left">
-            <h6 className="text-xl sm:text-2xl lg:text-[24px]  text-[#242424] leading-tight">
+          <div className="space-y-6 text-center lg:text-left ">
+            <h6 className="text-xl sm:text-2xl py-5 lg:text-[24px]  text-[#242424] leading-tight ">
               We Are A Leading Fuel Trading Company Delivering Premium Petroleum Products With Guaranteed Quality, Flexible Delivery, And Industry-Standard Safety Compliance.
             </h6>
 
