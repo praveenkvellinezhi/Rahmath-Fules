@@ -11,6 +11,7 @@ import FuelSupplyCTA from '../Components/Banner'
 import ImpactNumbers from '../Components/ImpactNumbers'
 import ClientTestimonials from '../Components/Testimonial'
 import InsightsSection from '../Components/Insights'
+import QuickInquiry from '../Components/Enquiry'
 
 export default function HomePage() {
   return (
@@ -24,6 +25,7 @@ export default function HomePage() {
         <ImpactNumbers />
         <ClientTestimonials />
         <InsightsSection />
+        <QuickInquiry />
         
     
     </div>

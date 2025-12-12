@@ -1,11 +1,17 @@
 import { ArrowRight } from "lucide-react";
+import Eco from "../../../assets/Images/Eco.jpg"
+import Delivery from "../../../assets/Images/Delivery .jpg"
+import FuelTest from "../../../assets/Images/FuelTest.jpg"
+
+
+
 
 export default function InsightsSection() {
   const articles = [
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80",
+      image:Delivery,
+        
       category: "Logistics",
       date: "Feb 2025",
       title: "How Bulk Fuel Delivery Works In The UAE",
@@ -13,7 +19,7 @@ export default function InsightsSection() {
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&q=80",
+        FuelTest,
       category: "Quality",
       date: "Jan 2025",
       title: "Why Fuel Quality Testing Matters",
@@ -21,7 +27,7 @@ export default function InsightsSection() {
     {
       id: 3,
       image:
-        "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=800&q=80",
+        Eco,
       category: "Sustainability",
       date: "Feb 2025",
       title: "The Future Of Eco-Friendly Transport",

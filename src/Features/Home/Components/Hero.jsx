@@ -1,44 +1,36 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../../../assets/Images/img1.png"
-import img2 from "../../../assets/Images/img2.jpg"
-import img3 from "../../../assets/Images/img3.png"
-import img4 from "../../../assets/Images/Fuel Supply.png"
-
-
-
-
+import img1 from "../../../assets/Images/img1.png";
+import img2 from "../../../assets/Images/img2.jpg";
+import img3 from "../../../assets/Images/img3.png";
+import img4 from "../../../assets/Images/Fuel Supply.png";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  // Placeholder images - replace with your actual images
-  const slides = [
-    img1,img2,img3,img4
-  ];
+
+  const slides = [img1, img2, img3, img4];
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
     }, 3000);
-
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []);
 
-  // Calculate positions for each card
+  // Handle card positions
   const getCardPosition = (index) => {
     const diff = (index - currentIndex + slides.length) % slides.length;
-    
-    if (diff === 0) return 'center';
-    if (diff === 1) return 'right';
-    if (diff === slides.length - 1) return 'left';
-    return 'hidden';
+
+    if (diff === 0) return "center";
+    if (diff === 1) return "right";
+    if (diff === slides.length - 1) return "left";
+    return "hidden";
   };
 
   return (
-    <section className="overflow-hidden  ">
-      {/* Blue Section */}
-      <div className="  sm:px-6 bg-[#f3f8fd] h-[75vh] relative">
-        <div className=" max-w-7xl py-12 sm:py-16 px-10">
+    <section className="overflow-hidden">
+      {/* HERO TEXT SECTION */}
+      <div className="sm:px-6 bg-[#f3f8fd] pt-16 pb-24 sm:pt-20 sm:pb-32 lg:pt-24 lg:pb-40 relative">
+        <div className=" mx-auto px-6 sm:px-10">
           <h1
             style={{
               fontWeight: 600,
@@ -49,11 +41,13 @@ export default function Hero() {
           >
             Fueling The Future With Trusted <br /> Energy Solutions
           </h1>
-             <p className="max-w-xl text-[16px] sm:text-[18px] md:text-[20px] leading-[1.6] text-gray-700 mt-3">
-              A Trusted name in Fuel Trading And Transportation with Decades of Expertise.
-            </p>
 
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 mt-8 sm:mt-10">
+          <p className="max-w-xl text-[16px] sm:text-[18px] md:text-[20px] leading-[1.6] text-gray-700 mt-3">
+            A Trusted name in Fuel Trading And Transportation with Decades of
+            Expertise.
+          </p>
+
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 mt-8 sm:mt-10">
             <div className="flex gap-4 flex-wrap">
               <button className="px-4 py-2 bg-[#203882] text-white rounded hover:bg-[#1a2d6b] transition-colors">
                 Get A Quote
@@ -62,36 +56,35 @@ export default function Hero() {
                 Explore Services
               </button>
             </div>
-
-         
           </div>
         </div>
       </div>
 
-      {/* Sliding Carousel */}
-      <div className="relative z-10 -mt-[120px] sm:-mt-[150px] md:-mt-[180px] flex justify-end px-4">
+      {/* SLIDING CAROUSEL */}
+      <div className="relative z-10 sm:py-20 mb-20 md:-mt-32 lg:-mt-60 flex justify-center sm:justify-end px-4">
         <div className="relative w-full max-w-5xl h-[200px] sm:h-[260px] md:h-[320px]">
-          
+
           {slides.map((slide, index) => {
             const position = getCardPosition(index);
-            
+
             return (
               <div
                 key={index}
-                className={`
-                  absolute top-0
+                className={` sm:mt-15
+                  absolute 
                   rounded-2xl overflow-hidden shadow-lg
                   w-[180px] h-[200px]
                   sm:w-[240px] sm:h-[260px]
                   md:w-[300px] md:h-[320px]
                   transition-all duration-700 ease-in-out
-                  ${position === 'center' 
-                    ? 'left-1/2 -translate-x-1/2 scale-110 z-30 opacity-100' 
-                    : position === 'left'
-                    ? 'left-[5%] sm:left-[10%] md:left-[15%] scale-90 z-20 opacity-60'
-                    : position === 'right'
-                    ? 'right-[5%] sm:right-[10%] md:right-[15%] scale-90 z-20 opacity-60'
-                    : 'left-1/2 -translate-x-1/2 scale-75 z-10 opacity-0'
+                  ${
+                    position === "center"
+                      ? "left-1/2 -translate-x-1/2 scale-110 z-30 opacity-100"
+                      : position === "left"
+                      ? "left-[5%] sm:left-[10%] md:left-[15%] scale-90 z-20 opacity-60"
+                      : position === "right"
+                      ? "right-[5%] sm:right-[10%] md:right-[15%] scale-90 z-20 opacity-60"
+                      : "left-1/2 -translate-x-1/2 scale-75 z-10 opacity-0"
                   }
                 `}
               >
@@ -107,16 +100,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Optional: Carousel Indicators */}
+      {/* CAROUSEL INDICATORS */}
       <div className="flex justify-center gap-2 mt-6">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full transition-all ${
-              index === currentIndex 
-                ? 'bg-[#203882] w-6' 
-                : 'bg-gray-300'
+              index === currentIndex ? "bg-[#203882] w-6" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
