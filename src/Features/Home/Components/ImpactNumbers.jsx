@@ -33,32 +33,30 @@ export default function ImpactNumbers() {
       </h2>
 
       {/* ✅ Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
-          return (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center"
-            >
-              {/* ✅ Responsive Icon Container */}
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-blue-900 flex items-center justify-center mb-5 sm:mb-6">
-                <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" strokeWidth={2} />
-              </div>
+    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
+  {stats.map((stat, index) => {
+    const Icon = stat.icon;
+    return (
+      <div
+        key={index}
+        className="flex flex-col items-center text-center"
+      >
+        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-blue-900 flex items-center justify-center mb-5 sm:mb-6">
+          <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-white" strokeWidth={2} />
+        </div>
 
-              {/* ✅ Responsive Number */}
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
-                {stat.number}
-              </h3>
+        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">
+          {stat.number}
+        </h3>
 
-              {/* ✅ Responsive Label */}
-              <p className="text-gray-600 text-sm sm:text-base">
-                {stat.label}
-              </p>
-            </div>
-          );
-        })}
+        <p className="text-gray-600 text-sm sm:text-base">
+          {stat.label}
+        </p>
       </div>
+    );
+  })}
+</div>
+
     </div>
   );
 }

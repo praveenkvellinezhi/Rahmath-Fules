@@ -53,7 +53,7 @@ export default function StatsAndOffer() {
 
   return (
     <>
-      {/* ===================== ✅ OFFER SECTION ===================== */}
+      {/* =====================  OFFER SECTION ===================== */}
       <section className="bg-white  py-12 sm:py-16 ">
         <h1 className="text-center text-[26px] sm:text-[30px] lg:text-[34px] font-semibold mb-4 sm:mb-5">
           What We Offer

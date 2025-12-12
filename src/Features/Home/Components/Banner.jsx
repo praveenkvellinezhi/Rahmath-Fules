@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function FuelSupplyCTA() {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 py-8">
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl 
+      <div className=" bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-3xl 
         px-6 sm:px-10 
         lg:px-10
         py-10 sm:py-16 
