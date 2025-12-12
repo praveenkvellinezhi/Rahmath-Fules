@@ -1,37 +1,66 @@
 import React from "react";
+import Blur from "../../../assets/Images/Blur.jpg";
+
 
 export default function BlogHero() {
   return (
-    <div className="w-full bg-white py-12 px-6">
+    <div className="w-full bg-white py-12 px-4 sm:px-6 lg:px-10">
       <div className="px-10 mx-auto">
-        <div className="flex items-center justify-between gap-8">
-          {/* Left Content */}
-          <div className="flex-1">
-            <h1 className="text-[60px] font-bold text-gray-900 mb-4">
-              Insights & Industry
-              <br />
-              Updates
+
+        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+
+          {/* LEFT SIDE TEXT */}
+          <div className="flex-1 text-center md:text-left ">
+            <h1 className="font-bold text-gray-900 leading-tight mb-4 
+              text-4xl sm:text-5xl md:text-[60px]
+            ">
+              Insights & Industry <br className="hidden md:block" /> Updates
             </h1>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+
+            <p className="text-gray-600    mx-auto md:mx-0 
+              text-sm sm:text-base lg:text-[24px] font-normal
+            ">
               Stay Informed With The Latest News, Trends, And Guidance In Fuel
-              Trading, Logistics, And Petroleum Quality Management.
+              Trading,  Logistics,Petroleum quality management.
             </p>
           </div>
 
-          {/* Right Image Section */}
-          <div className="relative flex items-center justify-center">
-            {/* BIG Background Circle on the RIGHT */}
-            <div className="absolute w-80 h-80 sm:w-96 sm:h-96 rounded-full bg-[#e9edf5] right-0 top-4 z-0"></div>
+          {/* RIGHT SIDE */}
+          <div className="relative flex items-center justify-center mb-5">
 
-            {/* Main Image on LEFT overlapping the circle */}
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-lg z-10 -mr-10">
+            {/* GRAY BACKGROUND CIRCLE */}
+            <div
+              className="
+                rounded-full bg-[#e9edf5] relative
+                ml-[60px]
+                w-40 h-40
+                sm:w-48 sm:h-48
+                md:w-52 md:h-52
+                lg:w-60 lg:h-60
+              "
+            ></div>
+
+            {/* WHITE OVERLAPPING IMAGE CIRCLE */}
+            <div
+              className="
+                absolute 
+                left-[-40px] top-[40px]
+                rounded-full bg-white shadow-xl overflow-hidden flex items-center justify-center
+                w-48 h-48
+                sm:w-56 sm:h-56
+                md:w-60 md:h-60
+                lg:w-64 lg:h-64
+              "
+            >
               <img
-                src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&h=400&fit=crop"
-                alt="Industrial facility"
-                className="w-full h-full object-cover"
+                src= {Blur}
+                alt='Industrial facility'
+                className='w-full h-full object-cover'
               />
             </div>
+
           </div>
+
         </div>
       </div>
     </div>
