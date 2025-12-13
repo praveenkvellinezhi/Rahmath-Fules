@@ -24,55 +24,59 @@ export default function BulkFuelWorking() {
       num: 4,
       title: "Transportation & GPS Monitoring",
       desc:
-        "Once Loaded, The Fuel Tanker Begins Its Journey. In The UAE, Licensed Tankers Are Equipped With GPS Tracking, Allowing Real-Time Monitoring Of Routes And Delivery Status. Trained And Certified Drivers Ensure Safe Movement Across All Emirates.",
+        "Once Loaded, The Fuel Tanker Begins Its Journey. Licensed Tankers Are Equipped With GPS Tracking, Allowing Real-Time Monitoring Of Routes And Delivery Status.",
     },
     {
       num: 5,
       title: "On-Site Delivery to the Customer",
       desc:
-        "Upon Arrival, Safety Checks Are Conducted Before Offloading Begins Using Sealed Hoses And Calibrated Meters. Fuel Is Dispensed Directly Into Storage Tanks, Generators, Or Fleet Vehicles Based On Customer Requirements.",
+        "Upon Arrival, Safety Checks Are Conducted Before Offloading Begins. Fuel Is Dispensed Directly Into Storage Tanks Or Fleet Vehicles As Required.",
     },
   ];
 
   return (
-    <div className="w-full bg-white lg:px-10 sm:px-10 py-12">
+    <div className="w-full bg-white px-4 sm:px-8 lg:px-10 py-10 sm:py-14">
 
-      {/* TITLE + LINES EXACT LIKE YOUR IMAGE */}
-      <div className="text-center mb-12 flex flex-col items-center">
+      {/* TITLE */}
+      <div className="text-center mb-10 flex flex-col items-center">
         <div className="flex items-center gap-4">
           <span className="hidden sm:block w-12 border-t border-gray-400"></span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">
             How It Works
           </h2>
           <span className="hidden sm:block w-12 border-t border-gray-400"></span>
         </div>
       </div>
 
-      {/* CENTERED CONTENT LIKE YOUR REFERENCE */}
-      <div className=" mx-auto space-y-10">
+      {/* STEPS */}
+      <div className="px-10 mx-auto space-y-8 sm:space-y-10">
 
         {steps.map((step) => (
-          <div key={step.num} className="flex gap-5 sm:gap-6 items-start">
-
-            {/* NUMBER CIRCLE */}
+          <div
+            key={step.num}
+            className="flex gap-4 sm:gap-6 items-start"
+          >
+            {/* NUMBER */}
             <div className="flex-shrink-0">
-              <div className="
-                w-10 h-10 sm:w-12 sm:h-12
-                rounded-full bg-blue-100 text-blue-600 
-                flex items-center justify-center 
-                font-semibold text-base sm:text-lg
-              ">
+              <div
+                className="
+                  w-9 h-9 sm:w-11 sm:h-11
+                  rounded-full bg-blue-100 text-blue-600
+                  flex items-center justify-center
+                  font-semibold text-sm sm:text-base
+                "
+              >
                 {step.num}
               </div>
             </div>
 
-            {/* TEXT CONTENT EXACT LIKE THE IMAGE */}
-            <div className="">
-              <h3 className="text-[27px] sm:text-xl font-semibold text-[#3F3F3F] mb-3">
+            {/* TEXT */}
+            <div>
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-2">
                 {step.title}
               </h3>
 
-              <p className="text-[#3F3F3F] text-[24px] sm:text-base leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-[17px] text-gray-600 leading-relaxed sm:leading-loose">
                 {step.desc}
               </p>
             </div>
