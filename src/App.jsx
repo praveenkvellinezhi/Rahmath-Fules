@@ -6,6 +6,9 @@ import AboutPage from "./Features/About/Pages/AboutPage";
 import ContactPage from "./Features/Contact/Pages/ContactPage";
 import BlogPage from "./Features/Blog/Pages/BlogPage";
 import BulkFuelDelivery from "./Features/Blog/Pages/BulkFuelDelivery";
+import FuelTypes from "./Features/FuelTypes/Pages/FuelTypes";
+import EnquiryForm from "./Features/FuelTypes/Pages/EnquiryForm";
+
 
 function App() {
   return (
@@ -19,6 +22,14 @@ function App() {
           <Route path="/Contact" element={<ContactPage />} />
           <Route path="/Blogs" element={<BlogPage />} />
           <Route path="/BulkFuelDelivery" element={<BulkFuelDelivery />} />
+          <Route path="/FuelTypes" element={<FuelTypes />} />
+          <Route path="/EnquiryForm" element={<EnquiryForm />} />
+
+
+
+
+       
+
 
 
 
